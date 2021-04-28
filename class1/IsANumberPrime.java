@@ -22,6 +22,8 @@ public class IsANumberPrime {
                 System.out.println("not prime");
             }
         }
+
+        scn.close();
         
     }
 }

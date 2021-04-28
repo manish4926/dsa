@@ -9,7 +9,7 @@ public class PrintAllPrimeNumbers {
 
         for (int i = low; i <= high; i++) {
             boolean flag = false;
-            for(int j = 2; j <= i/2; j++) {
+            for(int j = 2; j * j <= i; j++) {
                 if(i % 2 == 0) {
                     flag = true;
                     break;
@@ -24,5 +24,7 @@ public class PrintAllPrimeNumbers {
                 System.out.println(i);  
             }
         }
+
+        scn.close();
     }
 }

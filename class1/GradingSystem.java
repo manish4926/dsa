@@ -19,5 +19,7 @@ public class GradingSystem {
         } else {
             System.out.print("below par");
         }
+
+        scn.close();
     }
 }

@@ -9,5 +9,7 @@ public class CountDigitsInNumber {
             count++;
         }
         System.out.println(count);
+
+        scn.close();
     }
 }

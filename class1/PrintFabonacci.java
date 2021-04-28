@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class PrintFabonacci {
     public static void main(String[] args) {
-        java.util.Scanner scn = new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
         int start = 0;
         int end = 1;
@@ -12,6 +12,8 @@ public class PrintFabonacci {
             end = c;
             System.out.println(c);
         }
+
+        scn.close();
     }
     
 }
