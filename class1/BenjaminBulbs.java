@@ -1,15 +1,13 @@
 import java.util.Scanner;
 
-public class ReverceANumber {
+public class BenjaminBulbs {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
-        while(n > 0) {
-            int revnumber = n % 10; 
-            n = n / 10;
-            System.out.println(revnumber);
-        }
 
+        for(int i = 1; i * i <= n; i++) {
+            System.out.println(i * i);
+        }
         scn.close();
     }
 }
