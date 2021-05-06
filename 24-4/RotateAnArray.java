@@ -10,26 +10,29 @@ public class RotateAnArray {
             arr[i] = scn.nextInt();
         }
 
-        //int k = scn.nextInt();
+        int k = scn.nextInt();
 
-        reverse(arr);
+        rotate(arr, k);
         display(arr);
         scn.close();
     }   
 
-    public static void reverse(int[] a) {
+    public static void rotate(int[] a, int k) {
         // write your code here
-        int low = 0;
-        int high = a.length - 1;
-
-        while(low < high) {
-            int tmp = a[low];
-            a[low] = a[high];
-            a[high] = tmp;
+        int n = a.length;
+        k = k % n;
+        if(k < 0) {
+            k = k + n;
         }
 
-        low++;
-        high--;
+        int tmp;
+        for (int i = 0; i < k; i++) {
+            tmp = a[a.length - 1];
+            for(int j = a.length - 1; j > 0; j--) {
+                a[j] = a[j-1];
+            }
+            a[0] = tmp;
+        }
     }
 
     public static void display(int[] a) {
