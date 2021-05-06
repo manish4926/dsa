@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.*;
 
 public class SpanOfArray {
@@ -29,5 +28,7 @@ public class SpanOfArray {
 
         int res = spanOfArray(arr);
         System.out.println(res);
+
+        scn.close();
     }
 }
