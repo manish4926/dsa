@@ -1,15 +1,14 @@
 import java.util.Scanner;
 
-public class Spiral2DArray {
-    public static void main(String[] args) {
+public class ExitPointOfMatrix {
+    public static void main(String[] args) throws Exception {
+        // write your code here
         Scanner scn = new Scanner(System.in);
         int nr = scn.nextInt();
         int nc = scn.nextInt();
 
         // int nr = 4;
         // int nc = 4;
-
-
 
         int mat[][] = new int[nr][nc];
         for (int i = 0; i < nr; i++) {
@@ -40,23 +39,23 @@ public class Spiral2DArray {
 
         int i = 0, j = 0, dir = 0;
         int prevI = 0, prevJ = 0;
-        while(i < nr && j < nc) {
-            //System.out.println("i: "+i+" j:"+j);
-            if(mat[i][j] == 1) {
+        while (i < nr && j < nc) {
+            // System.out.println("i: "+i+" j:"+j);
+            if (mat[i][j] == 1) {
                 dir++;
                 dir = dir % 4;
             }
-            prevI = i; prevJ = j;
-            //System.out.println(dir);
-            j = dir == 0 ? j+1 : j;
-            i = dir == 1 ? i+1 : i;
+            prevI = i;
+            prevJ = j;
+            // System.out.println(dir);
+            j = dir == 0 ? j + 1 : j;
+            i = dir == 1 ? i + 1 : i;
             j = dir == 2 ? j - 1 : j;
             i = dir == 3 ? i - 1 : i;
-              
+
         }
         System.out.println(prevI);
         System.out.println(prevJ);
         scn.close();
-
     }
 }
