@@ -164,28 +164,150 @@ public class PrintPattern {
         //     System.out.println(n+ " * " + i+" = "+(n*i));
         // }
 
-        int s = n/2;
-        int stars = 1;
+        // int s = n/2;
+        // int stars = 1;
 
-        for (int i = 1; i <= n; i++) {
-            for(int j = 1; j <= s; j++) {
-                System.out.print("\t");
-            }
+        // for (int i = 1; i <= n; i++) {
+        //     for(int j = 1; j <= s; j++) {
+        //         System.out.print("\t");
+        //     }
 
-            for (int j = 1; j <= stars; j++) {
-                System.out.print("*\t");
-            }
+        //     for (int j = 1; j <= stars; j++) {
+        //         System.out.print("*\t");
+        //     }
 
-            if(i <= n/2) {
-                s--;
-                stars += 2;
-            } else {
-                s++;
-                stars -= 2;
-            }
+        //     if(i <= n/2) {
+        //         s--;
+        //         stars += 2;
+        //     } else {
+        //         s++;
+        //         stars -= 2;
+        //     }
             
-            System.out.println("\n");
+        //     System.out.println("\n");
             
+        // }
+
+        // int s = n / 2;
+        // int valc = 1;
+        // int rst = 1;
+
+        // for (int i = 1; i <= n; i++) {
+        //     for(int j = 1; j <= s; j++) {
+        //     System.out.print("\t");
+        //     }
+
+        //     int printval = rst;
+        //     //System.out.print(valc);
+        //     for (int j = 1; j <= valc; j++) {
+        //         System.out.print(printval+"\t");
+        //         if(j <= valc/2) {
+        //             printval++;
+        //         } else {
+        //             printval--;
+        //         }
+                
+        //     }
+
+        //     if(i <= n/2) {
+        //     s--;
+        //     valc += 2;
+        //     rst++;
+        //     } else {
+        //     s++;
+        //     valc -= 2;
+        //     rst--;
+        //     }
+
+        //     System.out.print("\n");
+
+        // }
+
+
+        // int start = 1;
+        // for (int i = 1; i <= n; i++) {
+        //     for (int j = start; j <= i; j++) {
+        //         System.out.print(j + "\t");
+        //     }
+        //     for (int j = start; j <= ((n - i) * 2) - 1; j++) {
+        //         System.out.print("\t");
+        //     }
+
+        //     int rcnt = (i == n) ? i - 1 : i;
+        //     int rv = rcnt;
+        //     for (int j = 1; j <= rcnt; j++) {
+        //         System.out.print(rv + "\t");
+        //         rv--;
+        //     }
+        //     System.out.print("\n");
+        // }
+
+
+        // int mid = (n + 1) / 2;
+        // int rv = 1;
+        // for (int i = 1; i <= n; i++) {
+        //     for (int j = 0; j < mid - 1; j++) {
+        //         if (i == mid) {
+        //             System.out.print("*\t");
+        //         } else {
+        //             System.out.print("\t");
+        //         }
+        //     }
+
+        //     for (int j = 1; j <= rv; j++) {
+        //         System.out.print("*\t");
+        //     }
+        //     if (i < mid) {
+        //         rv++;
+        //     } else {
+        //         rv--;
+        //     }
+
+        //     System.out.print("\n");
+        // }
+
+
+        // for (int row = 1; row <= n; row++) {
+        //     for (int col = 1; col <= n; col++) {
+        //         if (row == 1 || row == col || row + col == n + 1) {
+        //             System.out.print("*\t");
+        //         } else if (row > (n + 1) / 2 && row > col && row + col > n + 1) {
+        //             System.out.print("*\t");
+        //         } else {
+        //             System.out.print("\t");
+        //         }
+        //     }
+        //     System.out.print("\n");
+        // }
+
+
+
+        // for (int row = 1; row <= n; row++) {
+        //     for (int col = 1; col <= n; col++) {
+        //         if (row == (n + 1) / 2 || col == (n + 1) / 2) {
+        //             System.out.print("*\t");
+        //         } else if ((row == 1 && col < (n + 1) / 2) || (row == n && col > (n + 1) / 2)
+        //                 || (row > (n + 1) / 2) && col == 1 || (row < (n + 1) / 2) && col == n) {
+        //             System.out.print("*\t");
+        //         } else {
+        //             System.out.print("\t");
+        //         }
+        //     }
+        //     System.out.print("\n");
+        // }
+
+
+        for (int row = 1; row <= n; row++) {
+            for (int col = 1; col <= n; col++) {
+                if (col == 1 || col == n) {
+                    System.out.print("*\t");
+                } else if (row >= ((n + 1) / 2) && (row == col || row + col == n + 1)) {
+                    System.out.print("*\t");
+                } else {
+                    System.out.print("\t");
+                }
+            }
+            System.out.print("\n");
         }
         scn.close();
     }
