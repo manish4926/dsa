@@ -7,13 +7,24 @@ public class JavaOutputFormatting {
         String b = scn.nextLine();
         String c = scn.nextLine();
 
-        String a1[] = a.split(" ");
 
-        System.out.println(a1[0].length());
+        System.out.println("================================");
+        baseFun(a);
+        baseFun(b);
+        baseFun(c);
+        System.out.println("================================");
 
 
         scn.close();
 
 
+    }
+
+    public static void baseFun(String x) {
+        String x1[] = x.split(" ");
+        System.out.printf("%-15s", x1[0]);
+        System.out.printf("%03d", Integer.parseInt(x1[1]));
+        System.out.println();
+        // return null;
     }
 }
