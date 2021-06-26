@@ -5,7 +5,8 @@ public class BalancedBracketsStack {
         Scanner scn = new Scanner(System.in);
         String exp = scn.nextLine();
 
-        System.out.println(isBalanced(exp));        
+        System.out.println(isBalanced(exp)); 
+        scn.close();       
     }
 
     public static boolean isBalanced(String exp) {
